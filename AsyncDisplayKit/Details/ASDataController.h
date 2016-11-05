@@ -15,6 +15,7 @@
 #import <AsyncDisplayKit/ASDimension.h>
 #import <AsyncDisplayKit/ASFlowLayoutController.h>
 #import <AsyncDisplayKit/ASEventLog.h>
+#import <AsyncDisplayKit/ASCollectionData.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,11 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ASEnvironment;
 
 typedef NSUInteger ASDataControllerAnimationOptions;
-
-/**
- * ASCellNode creation block. Used to lazily create the ASCellNode instance for a specified indexPath.
- */
-typedef ASCellNode * _Nonnull(^ASCellNodeBlock)();
 
 FOUNDATION_EXPORT NSString * const ASDataControllerRowNodeKind;
 
@@ -63,6 +59,13 @@ FOUNDATION_EXPORT NSString * const ASDataControllerRowNodeKind;
  Fetch the number of sections.
  */
 - (NSUInteger)numberOfSectionsInDataController:(ASDataController *)dataController;
+
+@optional
+
+/**
+ * Fetch the new data set. This is called in endUpdates.
+ */
+- (id<ASCollectionData>)dataForDataController:(ASDataController *)dataController;
 
 @end
 
