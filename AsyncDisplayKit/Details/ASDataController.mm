@@ -65,6 +65,7 @@ NSString * const ASDataControllerRowNodeKind = @"_ASDataControllerRowNodeKind";
   BOOL _delegateDidInsertSections;
   BOOL _delegateDidDeleteSections;
   ASCollectionData *_data;
+  std::atomic<BOOL> _supportsDeclarativeData;
 }
 
 @end
@@ -125,6 +126,16 @@ NSString * const ASDataControllerRowNodeKind = @"_ASDataControllerRowNodeKind";
   _delegateDidDeleteNodes     = [_delegate respondsToSelector:@selector(dataController:didDeleteNodes:atIndexPaths:withAnimationOptions:)];
   _delegateDidInsertSections  = [_delegate respondsToSelector:@selector(dataController:didInsertSections:atIndexSet:withAnimationOptions:)];
   _delegateDidDeleteSections  = [_delegate respondsToSelector:@selector(dataController:didDeleteSectionsAtIndexSet:withAnimationOptions:)];
+}
+
+- (void)setSupportsDeclarativeData:(BOOL)supportsDeclarativeData
+{
+  _supportsDeclarativeData = supportsDeclarativeData;
+}
+
+- (BOOL)supportsDeclarativeData
+{
+  return _supportsDeclarativeData;
 }
 
 + (NSUInteger)parallelProcessorCount
@@ -797,7 +808,7 @@ NSString * const ASDataControllerRowNodeKind = @"_ASDataControllerRowNodeKind";
   __weak id<ASEnvironment> environment = [self.environmentDelegate dataControllerEnvironment];
   
   for (NSIndexPath *indexPath in sortedIndexPaths) {
-	ASCellNodeBlock nodeBlock = [self nodeBlockForItemAtIndexPath:indexPath];
+    ASCellNodeBlock nodeBlock = [self nodeBlockForItemAtIndexPath:indexPath];
     ASSizeRange constrainedSize = [self constrainedSizeForNodeOfKind:ASDataControllerRowNodeKind atIndexPath:indexPath];
     [contexts addObject:[[ASIndexedNodeContext alloc] initWithNodeBlock:nodeBlock
                                                               indexPath:indexPath
