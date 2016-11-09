@@ -432,6 +432,7 @@
 		CC051F1F1D7A286A006434CB /* ASCALayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC051F1E1D7A286A006434CB /* ASCALayerTests.m */; };
 		CC0AEEA41D66316E005D1C78 /* ASUICollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0AEEA31D66316E005D1C78 /* ASUICollectionViewTests.m */; };
 		CC11F97A1DB181180024D77B /* ASNetworkImageNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC11F9791DB181180024D77B /* ASNetworkImageNodeTests.m */; };
+		CC17AB851DD2DE6D009E7EE7 /* ASCollectionDataInternal.mm in Sources */ = {isa = PBXBuildFile; fileRef = CCA845531DCE67A600FC50C5 /* ASCollectionDataInternal.mm */; };
 		CC3B20841C3F76D600798563 /* ASPendingStateController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC3B20811C3F76D600798563 /* ASPendingStateController.h */; };
 		CC3B20851C3F76D600798563 /* ASPendingStateController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC3B20821C3F76D600798563 /* ASPendingStateController.mm */; };
 		CC3B20861C3F76D600798563 /* ASPendingStateController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC3B20821C3F76D600798563 /* ASPendingStateController.mm */; };
@@ -2361,6 +2362,7 @@
 				92DD2FE71BF4D0850074C9DD /* ASMapNode.mm in Sources */,
 				636EA1A51C7FF4EF00EE152F /* ASDefaultPlayButton.m in Sources */,
 				9B92C8861BC2EB7600EE46B2 /* ASCollectionViewFlowLayoutInspector.m in Sources */,
+				CC17AB851DD2DE6D009E7EE7 /* ASCollectionDataInternal.mm in Sources */,
 				9B92C8851BC2EB6E00EE46B2 /* ASCollectionDataController.mm in Sources */,
 				B350623D1B010EFD0018CF92 /* _ASAsyncTransaction.mm in Sources */,
 				B35062401B010EFD0018CF92 /* _ASAsyncTransactionContainer.m in Sources */,
