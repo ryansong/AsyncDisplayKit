@@ -433,6 +433,8 @@
 		CC0AEEA41D66316E005D1C78 /* ASUICollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0AEEA31D66316E005D1C78 /* ASUICollectionViewTests.m */; };
 		CC11F97A1DB181180024D77B /* ASNetworkImageNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC11F9791DB181180024D77B /* ASNetworkImageNodeTests.m */; };
 		CC17AB851DD2DE6D009E7EE7 /* ASCollectionDataInternal.mm in Sources */ = {isa = PBXBuildFile; fileRef = CCA845531DCE67A600FC50C5 /* ASCollectionDataInternal.mm */; };
+		CC17AB861DD2DEF2009E7EE7 /* ASCollectionDataInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA845521DCE67A600FC50C5 /* ASCollectionDataInternal.h */; };
+		CC17AB871DD2DF1D009E7EE7 /* ASCollectionDataInternal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CCA845521DCE67A600FC50C5 /* ASCollectionDataInternal.h */; };
 		CC3B20841C3F76D600798563 /* ASPendingStateController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC3B20811C3F76D600798563 /* ASPendingStateController.h */; };
 		CC3B20851C3F76D600798563 /* ASPendingStateController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC3B20821C3F76D600798563 /* ASPendingStateController.mm */; };
 		CC3B20861C3F76D600798563 /* ASPendingStateController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC3B20821C3F76D600798563 /* ASPendingStateController.mm */; };
@@ -666,6 +668,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				69127CFE1DD2B387004BF6E2 /* ASEventLog.h in CopyFiles */,
+				CC17AB871DD2DF1D009E7EE7 /* ASCollectionDataInternal.h in CopyFiles */,
 				CCA845561DCE680600FC50C5 /* ASCollectionData.h in CopyFiles */,
 				693117CE1DC7C72700DE4784 /* ASDisplayNode+Deprecated.h in CopyFiles */,
 				69F381A51DA4630D00CF2278 /* NSArray+Diffing.h in CopyFiles */,
@@ -1951,6 +1954,7 @@
 				509E68651B3AEDC5009B9150 /* CoreGraphics+ASConvenience.h in Headers */,
 				B350623A1B010EFD0018CF92 /* NSMutableAttributedString+TextKitAdditions.h in Headers */,
 				044284FF1BAA3BD600D16268 /* UICollectionViewLayout+ASConvenience.h in Headers */,
+				CC17AB861DD2DEF2009E7EE7 /* ASCollectionDataInternal.h in Headers */,
 				B35062431B010EFD0018CF92 /* UIView+ASConvenience.h in Headers */,
 				8BDA5FC71CDBDF91007D13B2 /* ASVideoPlayerNode.h in Headers */,
 			);
